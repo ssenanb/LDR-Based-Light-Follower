@@ -5,11 +5,17 @@ This project uses 2 LDRs to detect ambient light and rotates the servo motor to 
 
 -> Components Used
 STM32F0DISC
+
 2 x LDRs
+
 2 x Resistsnce (10k)
+
 I2C LCD Screen 
+
 SG-90 Servo Motor
+
 1.5*4 - 6V Alkalin Battery
+
 Jumper Cables
 
 -> Circuit Installation 
@@ -31,25 +37,38 @@ Figur2 : 180°
 
 PA0 & PA1 -> LDR (ADC_IN0 & ADC_IN1)
 
+
 PA5 -> Servo Motor - Signal Pin -> (TIM2_CH1)
+
 Servo Motor -> VCC -> Battery VCC
+
 Servo Motor -> GND -> Board & Battery GND
 
+
 PB6 -> I2C LCD -> SCL
+
 PB7 -> I2C LCD -> SDA
+
 I2C LCD -> VCC -> Arduino Uno 5V
+
 I2C LCD -> GND -> Arduino Uno GND & Board
 
+
 STM32F0DISC -> 5V -> Board
+
 STM32F0DISC -> GND -> Board
+
  
 CONCLUSION: I used Arduino Uno due to I2C LCD did not enough to power from STM32F0DISC when it's VCC attaching the cable to STM32F0DISC and I connected a 5V adaptor to power to Arduino UNO.
 Also, i do when the first time, servo motor did not enough to power from STM32F0DISC. Thus, i connected a 6V battery to motor. In result of i learned i should have connected a battery for servo motor and used external 5V adaptor for run I2C LCD properly.
 
 -> Software
 STM32CubeIDE
+
 I2C LCD Library --> I used this library : https://github.com/alixahedi/i2c-lcd-stm32
+
 C Programming Language
+
 ST-Link Debugger
 
 -> Working Principle
