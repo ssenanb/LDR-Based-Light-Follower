@@ -13,9 +13,19 @@ SG-90 Servo Motor
 Jumper Cables
 
 -> Circuit Installation 
+Figur1 : 90°
 
+<img src="https://github.com/ssenanb/LDR-Based-Light-Follower/blob/main/circuit-installation-90-angle.jpeg?raw=true" alt="Devre Kurulumu - 90 Derece Görseli" width="500"/>
 
+Figur2 : 0°
 
+<img src="https://github.com/ssenanb/LDR-Based-Light-Follower/blob/main/circuit-installation-0-angle.jpeg?raw=true" alt="Devre Kurulumu - Açı Görseli" width="500"/>
+
+Figur2 : 180°
+
+<img src="https://github.com/ssenanb/LDR-Based-Light-Follower/blob/main/circuit-installation-180-angle.jpeg?raw=true" alt="Devre Kurulumu - 180 Derece Görseli" width="500"/>
+
+-> Pin Configuration 
 
 
 
