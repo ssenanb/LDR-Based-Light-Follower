@@ -1,10 +1,10 @@
 # LDR-Based-Light-Follower
 
--> Project Description
+## Project Description
 
 This project uses 2 LDRs to detect ambient light and rotates the servo motor to the opposite side of the LDR where the light intensity is low. Thus, the servo moves to the area with higher light. Also, the servo position (turned right or left) is printed on the LCD screen.
 
--> Components Used
+## Components Used
 
 STM32F0DISC
 
@@ -20,7 +20,7 @@ SG-90 Servo Motor
 
 Jumper Cables
 
--> Circuit Installation 
+## Circuit Installation 
 
 Figur1 : 90°
 
@@ -34,7 +34,7 @@ Figur2 : 180°
 
 <img src="https://github.com/ssenanb/LDR-Based-Light-Follower/blob/main/circuit-installation-180-angle.jpeg?raw=true" alt="Devre Kurulumu - 180 Derece Görseli" width="500"/>
 
--> Pin Configuration 
+## Pin Configuration 
 
 <img src="https://github.com/ssenanb/LDR-Based-Light-Follower/blob/main/pin-configuration.png?raw=true" alt="Pin Konfigürasyonu" width="500"/>
 
