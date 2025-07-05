@@ -17,13 +17,17 @@ static void MX_TIM2_Init(void);
 uint32_t leftLDR;
 uint32_t rightLDR;
 
-uint32_t readLDR(uint32_t channel{  /* Get LDR Values */
+void readLDR(){  /* Get LDR Values */
 
 	HAL_ADC_Start(&hadc);
+	
 	HAL_ADC_PollForConversion(&hadc, HAL_MAX_DELAY);
-	channel = HAL_ADC_GetValue(&hadc);
+	leftLDR = HAL_ADC_GetValue(&hadc);
 
-	return channel;
+	HAL_ADC_PollForConversion(&hadc, HAL_MAX_DELAY);
+	rightLDR = HAL_ADC_GetValue(&hadc);
+	
+	HAL_ADC_Stop(&hadc);
 }
 
 uint16_t angle_to_ccr(uint8_t angle) {  /* Calculate CCR Value For Servo Motor */
@@ -50,8 +54,7 @@ int main(void)
 
   while (1)
   {
-  rightLDR = readLDR(ADC_CHANNEL_1);
-  leftLDR = readLDR(ADC_CHANNEL_0);
+  readLDR();
 
   if(leftLDR < 1000 && rightLDR > 1000){
 	lcd_clear(&hlcd);
